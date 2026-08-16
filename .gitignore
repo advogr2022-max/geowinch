@@ -1,0 +1,34 @@
+# Build artifacts
+build/
+build_*/
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.a
+*.apk
+*.aab
+
+# IDE
+.vscode/
+.idea/
+*.user
+*.suo
+
+# Qt
+*.pro.user
+.qmake.stash
+Makefile
+Makefile.*
+
+# Android
+android/local.properties
+android/.gradle/
+android/build/
+*.keystore
+
+# Misc
+*.log
+.DS_Store
+Thumbs.db

@@ -1,0 +1,352 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{2A1C4F23-9C2A-47AD-9DB2-3DA4F11D809F}</ProjectGuid>
+        <ProjectType>CppVCLApplication</ProjectType>
+        <MainSource>WinchCtrl.cpp</MainSource>
+        <Config Condition="'$(Config)'==''">Release</Config>
+        <ProjectVersion>15.3</ProjectVersion>
+        <FrameworkType>VCL</FrameworkType>
+        <Base>True</Base>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+        <TargetedPlatforms>1</TargetedPlatforms>
+        <AppType>Application</AppType>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+        <Base_Win32>true</Base_Win32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+        <Base_Win64>true</Base_Win64>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
+        <Cfg_1>true</Cfg_1>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+        <Cfg_1_Win32>true</Cfg_1_Win32>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win64)'!=''">
+        <Cfg_1_Win64>true</Cfg_1_Win64>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
+        <Cfg_2>true</Cfg_2>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+        <Cfg_2_Win32>true</Cfg_2_Win32>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win64)'!=''">
+        <Cfg_2_Win64>true</Cfg_2_Win64>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base)'!=''">
+        <VerInfo_Keys>CompanyName=Geo Sys - Umwelttechnik und Geogeräte GmbH Leipzig;FileDescription=;FileVersion=3.0.0.47;InternalName=;LegalCopyright=2015;LegalTrademarks=;OriginalFilename=;ProductName=WinchControl;ProductVersion=3.0.0.0;Comments=</VerInfo_Keys>
+        <VerInfo_AutoGenVersion>true</VerInfo_AutoGenVersion>
+        <VerInfo_Build>47</VerInfo_Build>
+        <DCC_Namespace>Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;System;Xml;Data;Datasnap;Web;Soap;FMX;$(DCC_Namespace)</DCC_Namespace>
+        <VerInfo_Locale>1031</VerInfo_Locale>
+        <VerInfo_MajorVer>3</VerInfo_MajorVer>
+        <BCC_whid>false</BCC_whid>
+        <ILINK_AllWarnings>true</ILINK_AllWarnings>
+        <ILINK_SelectedWarnings>false</ILINK_SelectedWarnings>
+        <BCC_weas>false</BCC_weas>
+        <IncludePath>..\..\lib\EvntMgr\src\;..\..\lib\ADV_DAQNavi\src\;..\..\lib\BasicCAN\src\;..\..\lib\TR22Protocol\;..\..\packages\WinchCtrlMainView\;..\..\lib\UniCode\;..\..\lib\PrgAutomaticTool\;..\..\packages\JM\JMAdvLabeledEdit;..\..\lib\BasicCAN\src;..\..\lib\EvntMgr\src;..\..\lib\ErrMgr;..\..\lib\ADV_DAQNavi\src;..\..\lib\AverageManager;..\..\lib\TR22Protocol;..\..\packages\WinchCtrlMainView;..\..\packages\VirtualKeyBoard\src;..\..\lib\UniCode;..\..\lib\PrgAutomaticTool;..\..\lib\UniCode;..\..\lib\PrgAutomaticTool;..\..\lib\TR22Protocol;..\..\lib\AverageManager;..\..\packages\VirtualKeyBoard\src\;$(IncludePath)</IncludePath>
+        <LinkPackageStatics>rtl.lib;vcl.lib;VKeyBoard.lib;bcbsmp.lib;vclx.lib;WinchCtrlMainView.lib;JMPackages.lib</LinkPackageStatics>
+        <PackageImports>rtl.bpi;vcl.bpi;vclx.bpi;vcljpg.bpi;bcbsmp.bpi;dbrtl.bpi;vcldb.bpi;bdertl.bpi;teeui.bpi;teedb.bpi;tee.bpi;ibsmp.bpi;VKeyBoard.bpi;WinchCtrlMainlView.bpi;JMPackages.bpi;$(PackageImports)</PackageImports>
+        <BCC_PCHCache>true</BCC_PCHCache>
+        <DCC_UnitSearchPath>.\;$(BDS)\lib;$(BDS)\lib\obj;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <ILINK_AppType>Windows</ILINK_AppType>
+        <BRCC_IncludePath>..\..\lib\AverageManager;..\..\lib\TR22Protocol;..\Bilder\Buttons;..\..\packages\WinchCtrlMainView;..\..\packages\VirtualKeyBoard;$(BDS)\include;$(BDS)\include\vcl;$(BRCC_IncludePath)</BRCC_IncludePath>
+        <BCC_OptimizeForSpeed>true</BCC_OptimizeForSpeed>
+        <DCC_IncludePath>.\;$(BDS)\lib;$(BDS)\lib\obj;$(DCC_IncludePath)</DCC_IncludePath>
+        <TASM_IncludePath>..\..\lib\AverageManager;..\..\lib\TR22Protocol;..\Bilder\Buttons;..\..\packages\WinchCtrlMainView;..\..\packages\VirtualKeyBoard;$(BDS)\include;$(BDS)\include\vcl;$(TASM_IncludePath)</TASM_IncludePath>
+        <BCC_IncludePath>..\..\lib\AverageManager;..\..\lib\TR22Protocol;..\Bilder\Buttons;..\..\packages\WinchCtrlMainView;..\..\packages\VirtualKeyBoard;$(BDS)\include;$(BDS)\include\vcl;$(BCC_IncludePath)</BCC_IncludePath>
+        <DCC_CBuilderOutput>JPHNE</DCC_CBuilderOutput>
+        <BCC_GenerateMultithreaded>true</BCC_GenerateMultithreaded>
+        <FinalOutputDir>..\Program\</FinalOutputDir>
+        <BCC_GenerateWindowsApp>true</BCC_GenerateWindowsApp>
+        <TASM_Debugging>None</TASM_Debugging>
+        <TASM_AdditionalSwitches> /w2</TASM_AdditionalSwitches>
+        <AllPackageLibs>rtl.lib;vcl.lib;VKeyBoard.lib;bcbsmp.lib;vclx.lib;WinchCtrlMainView.lib;JMPackages.lib</AllPackageLibs>
+        <ILINK_LibraryPath>..\..\lib\EvntMgr\src\;..\..\lib\ADV_DAQNavi\src\;..\..\lib\BasicCAN\src\;..\..\packages\VirtualKeyBoard\src\;..\..\lib\TR22Protocol\;..\..\packages\WinchCtrlMainView\;..\..\lib\UniCode\;..\..\lib\PrgAutomaticTool\;..\..\packages\JM\JMAdvLabeledEdit;..\..\lib\BasicCAN\src;..\..\lib\EvntMgr\src;..\..\lib\ErrMgr;..\..\lib\ADV_DAQNavi\src;..\..\lib\AverageManager;..\..\lib\TR22Protocol;..\..\packages\WinchCtrlMainView;..\..\packages\VirtualKeyBoard\src;..\..\lib\AverageManager;..\..\lib\TR22Protocol;..\..\lib\UniCode;..\..\lib\PrgAutomaticTool;ADSAPI\Lib;..\Bilder\Buttons;$(BDS)\lib\obj;$(BDS)\lib\psdk;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <OutputExt>exe</OutputExt>
+        <DCC_AdditionalSwitches> -M</DCC_AdditionalSwitches>
+        <Multithreaded>true</Multithreaded>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win32)'!=''">
+        <BCC_UserSuppliedOptions> -6 -Vx -Ve</BCC_UserSuppliedOptions>
+        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+        <Debugger_RunParams>-devel -lang=de</Debugger_RunParams>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <Icon_MainIcon>WinchCtrl_Icon.ico</Icon_MainIcon>
+        <IncludePath>$(BDSINCLUDE)\windows\vcl;$(IncludePath)</IncludePath>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+        <Debugger_CWD>D:\_Entwicklung\Wfzsr\CtrlSw\Program</Debugger_CWD>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win64)'!=''">
+        <Icon_MainIcon>WinchCtrl_Icon.ico</Icon_MainIcon>
+        <IncludePath>$(BDSINCLUDE)\windows\vcl;$(IncludePath)</IncludePath>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1)'!=''">
+        <ILINK_LibraryPath>$(BDS)\lib\debug;$(ILINK_LibraryPath);$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <DCC_Define>DEBUG;$(DCC_Define);$(DCC_Define)</DCC_Define>
+        <BCC_SourceDebuggingOn>true</BCC_SourceDebuggingOn>
+        <IntermediateOutputDir>Debug_Build</IntermediateOutputDir>
+        <ILINK_FullDebugInfo>true</ILINK_FullDebugInfo>
+        <TASM_DisplaySourceLines>true</TASM_DisplaySourceLines>
+        <BCC_DisableOptimizations>true</BCC_DisableOptimizations>
+        <TASM_Debugging>Full</TASM_Debugging>
+        <DCC_AdditionalSwitches> -M -V</DCC_AdditionalSwitches>
+        <BCC_DebugLineNumbers>true</BCC_DebugLineNumbers>
+        <DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
+        <BCC_InlineFunctionExpansion>false</BCC_InlineFunctionExpansion>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <BCC_UserSuppliedOptions> -6 -Vx -Ve -k</BCC_UserSuppliedOptions>
+        <BCC_Defines>_DEBUG;$(BCC_Defines);$(BCC_Defines)</BCC_Defines>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win64)'!=''">
+        <BCC_Defines>_DEBUG;$(BCC_Defines);$(BCC_Defines)</BCC_Defines>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2)'!=''">
+        <IntermediateOutputDir>Release_Build</IntermediateOutputDir>
+        <DCC_AdditionalSwitches> -M -$O+</DCC_AdditionalSwitches>
+        <ILINK_LibraryPath>$(BDS)\lib\release;$(ILINK_LibraryPath);$(ILINK_LibraryPath)</ILINK_LibraryPath>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+        <ILINK_LibraryPath>..\..\packages\VirtualKeyBoard\bin\;..\..\packages\WinchCtrlMainView\bin\;..\..\packages\JM\bin\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <BCC_UserSuppliedOptions> -6 -Vx -Ve -r</BCC_UserSuppliedOptions>
+        <BCC_Defines>NDEBUG;$(BCC_Defines);$(BCC_Defines)</BCC_Defines>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Win64)'!=''">
+        <BCC_Defines>NDEBUG;$(BCC_Defines);$(BCC_Defines)</BCC_Defines>
+    </PropertyGroup>
+    <ItemGroup>
+        <LibFiles Include="ADSAPI\Lib\adsapi32bcb.lib">
+            <BuildOrder>7</BuildOrder>
+            <BuildOrder>14</BuildOrder>
+        </LibFiles>
+        <CppCompile Include="DevelF.cpp">
+            <BuildOrder>6</BuildOrder>
+            <Form>DevelForm</Form>
+            <DependentOn>DevelF.h</DependentOn>
+            <BuildOrder>17</BuildOrder>
+        </CppCompile>
+        <ResourceCompile Include="files.rc">
+            <Form>sounds.res</Form>
+            <BuildOrder>27</BuildOrder>
+        </ResourceCompile>
+        <CppCompile Include="GUIMain.cpp">
+            <Form>MainForm</Form>
+            <DependentOn>GUIMain.h</DependentOn>
+            <BuildOrder>18</BuildOrder>
+        </CppCompile>
+        <None Include="ModelSupport_WinchCtrl\default.txvpck"/>
+        <CppCompile Include="Splash.cpp">
+            <BuildOrder>9</BuildOrder>
+            <Form>SplashForm</Form>
+            <DependentOn>Splash.h</DependentOn>
+            <BuildOrder>2</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="VarControl.cpp">
+            <BuildOrder>-1</BuildOrder>
+            <DependentOn>VarControl.h</DependentOn>
+            <BuildOrder>1</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="WCAnalysis.cpp">
+            <BuildOrder>4</BuildOrder>
+            <DependentOn>WCAnalysis.h</DependentOn>
+            <BuildOrder>13</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="WCControlThread.cpp">
+            <BuildOrder>3</BuildOrder>
+            <DependentOn>WCControlThread.h</DependentOn>
+            <BuildOrder>10</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="WCDisplayThread.cpp">
+            <BuildOrder>9</BuildOrder>
+            <DependentOn>WCDisplayThread.h</DependentOn>
+            <BuildOrder>2</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="WCIO.cpp">
+            <BuildOrder>6</BuildOrder>
+            <DependentOn>WCIO.h</DependentOn>
+            <BuildOrder>17</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="WCLog.cpp">
+            <BuildOrder>8</BuildOrder>
+            <DependentOn>WCLog.h</DependentOn>
+            <BuildOrder>15</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="WCLOGinternal.cpp">
+            <BuildOrder>11</BuildOrder>
+            <DependentOn>WCLOGinternal.h</DependentOn>
+            <BuildOrder>0</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="WinchCtrl.cpp">
+            <BuildOrder>-1</BuildOrder>
+            <BuildOrder>0</BuildOrder>
+        </CppCompile>
+        <None Include="WinchCtrl.otares"/>
+        <ResFiles Include="winchctrl.res">
+            <BuildOrder>20</BuildOrder>
+        </ResFiles>
+        <CppCompile Include="..\..\lib\ADV_DAQNavi\src\ADV_DAQNavi_PCI1716.cpp">
+            <DependentOn>..\..\lib\ADV_DAQNavi\src\ADV_DAQNavi_PCI1716.h</DependentOn>
+            <BuildOrder>23</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\lib\ADV_DAQNavi\src\ADV_DAQNavi_PCI1762.cpp">
+            <DependentOn>..\..\lib\ADV_DAQNavi\src\ADV_DAQNavi_PCI1762.h</DependentOn>
+            <BuildOrder>24</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\lib\AverageManager\AverageManager_Base.cpp">
+            <BuildOrder>22</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\lib\AverageManager\AverageManager_float.cpp">
+            <DependentOn>..\..\lib\AverageManager\AverageManager_float.h</DependentOn>
+            <BuildOrder>20</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\lib\AverageManager\AverageManager_int.cpp">
+            <DependentOn>..\..\lib\AverageManager\AverageManager_int.h</DependentOn>
+            <BuildOrder>21</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\lib\BasicCAN\src\BasicCAN.cpp">
+            <DependentOn>..\..\lib\BasicCAN\src\BasicCAN.h</DependentOn>
+            <BuildOrder>26</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\lib\EvntMgr\src\EvntMgr.cpp">
+            <DependentOn>..\..\lib\EvntMgr\src\EvntMgr.h</DependentOn>
+            <BuildOrder>27</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\lib\PrgAutomaticTool\PrgAutomatic.cpp">
+            <DependentOn>..\..\lib\PrgAutomaticTool\PrgAutomatic.h</DependentOn>
+            <BuildOrder>20</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\lib\TR22Protocol\TR22Protocol.cpp">
+            <DependentOn>..\..\lib\TR22Protocol\TR22Protocol.h</DependentOn>
+            <BuildOrder>22</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\lib\UniCode\UnicodeCoder.cpp">
+            <DependentOn>..\..\lib\UniCode\UnicodeCoder.h</DependentOn>
+            <BuildOrder>20</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\packages\VirtualKeyBoard\src\VirtualKeyBoard.cpp">
+            <DependentOn>..\..\packages\VirtualKeyBoard\src\VirtualKeyBoard.h</DependentOn>
+            <BuildOrder>21</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\packages\WinchCtrlMainView\DirectionViewVert01.cpp">
+            <DependentOn>..\..\packages\WinchCtrlMainView\DirectionViewVert01.h</DependentOn>
+            <BuildOrder>22</BuildOrder>
+        </CppCompile>
+        <FormResources Include="Splash.dfm"/>
+        <FormResources Include="GUIMain.dfm"/>
+        <FormResources Include="DevelF.dfm"/>
+        <BuildConfiguration Include="Release">
+            <Key>Cfg_2</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Base">
+            <Key>Base</Key>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Debug">
+            <Key>Cfg_1</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+    </ItemGroup>
+    <Import Project="$(BDS)\Bin\CodeGear.Cpp.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Cpp.Targets')"/>
+    <ProjectExtensions>
+        <Borland.Personality>CPlusPlusBuilder.Personality.12</Borland.Personality>
+        <Borland.ProjectType>CppVCLApplication</Borland.ProjectType>
+        <BorlandProject>
+            <CPlusPlusBuilder.Personality>
+                <VersionInfo>
+                    <VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+                    <VersionInfo Name="AutoIncBuild">True</VersionInfo>
+                    <VersionInfo Name="MajorVer">3</VersionInfo>
+                    <VersionInfo Name="MinorVer">0</VersionInfo>
+                    <VersionInfo Name="Release">0</VersionInfo>
+                    <VersionInfo Name="Build">47</VersionInfo>
+                    <VersionInfo Name="Debug">False</VersionInfo>
+                    <VersionInfo Name="PreRelease">False</VersionInfo>
+                    <VersionInfo Name="Special">False</VersionInfo>
+                    <VersionInfo Name="Private">False</VersionInfo>
+                    <VersionInfo Name="DLL">False</VersionInfo>
+                    <VersionInfo Name="Locale">1031</VersionInfo>
+                    <VersionInfo Name="CodePage">1252</VersionInfo>
+                </VersionInfo>
+                <VersionInfoKeys>
+                    <VersionInfoKeys Name="CompanyName">Geo Sys - Umwelttechnik und Geogeräte GmbH Leipzig</VersionInfoKeys>
+                    <VersionInfoKeys Name="FileDescription"/>
+                    <VersionInfoKeys Name="FileVersion">3.0.0.47</VersionInfoKeys>
+                    <VersionInfoKeys Name="InternalName"/>
+                    <VersionInfoKeys Name="LegalCopyright">2015</VersionInfoKeys>
+                    <VersionInfoKeys Name="LegalTrademarks"/>
+                    <VersionInfoKeys Name="OriginalFilename"/>
+                    <VersionInfoKeys Name="ProductName">WinchControl</VersionInfoKeys>
+                    <VersionInfoKeys Name="ProductVersion">3.0.0.0</VersionInfoKeys>
+                    <VersionInfoKeys Name="Comments"/>
+                </VersionInfoKeys>
+                <Debugging>
+                    <Debugging Name="DebugSourceDirs"/>
+                </Debugging>
+                <Parameters>
+                    <Parameters Name="RunParams">-devel -lang=de</Parameters>
+                    <Parameters Name="Launcher"/>
+                    <Parameters Name="UseLauncher">False</Parameters>
+                    <Parameters Name="DebugCWD">D:\_Entwicklung\Wfzsr\CtrlSw\Program</Parameters>
+                    <Parameters Name="HostApplication"/>
+                    <Parameters Name="RemoteHost"/>
+                    <Parameters Name="RemotePath"/>
+                    <Parameters Name="RemoteParams"/>
+                    <Parameters Name="RemoteLauncher"/>
+                    <Parameters Name="UseRemoteLauncher">False</Parameters>
+                    <Parameters Name="RemoteCWD"/>
+                    <Parameters Name="RemoteDebug">False</Parameters>
+                    <Parameters Name="Debug Symbols Search Path"/>
+                    <Parameters Name="LoadAllSymbols">True</Parameters>
+                    <Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+                </Parameters>
+                <ProjectProperties>
+                    <ProjectProperties Name="AutoShowDeps">False</ProjectProperties>
+                    <ProjectProperties Name="ManagePaths">True</ProjectProperties>
+                    <ProjectProperties Name="VerifyPackages">True</ProjectProperties>
+                </ProjectProperties>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\bcboffice2k120.bpl">CodeGear C++Builder Office 2000-Server-Package</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\bcbofficexp120.bpl">CodeGear C++Builder Office XP-Server-Package</Excluded_Packages>
+                </Excluded_Packages>
+                <Source>
+                    <Source Name="MainSource">WinchCtrl.cpp</Source>
+                </Source>
+            </CPlusPlusBuilder.Personality>
+            <ModelSupport>False</ModelSupport>
+            <Platforms>
+                <Platform value="Win32">True</Platform>
+                <Platform value="Win64">False</Platform>
+            </Platforms>
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <Import Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj" Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')"/>
+</Project>

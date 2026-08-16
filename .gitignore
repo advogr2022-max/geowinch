@@ -9,6 +9,25 @@ build_*/
 *.a
 *.apk
 *.aab
+*.ilc
+*.ild
+*.ilf
+*.ils
+*.tds
+*.map
+*.pab
+*.par
+*.dcu
+*.res
+*.dsk
+*.stat
+*.local
+*.otares
+*.tvsconfig
+*.~res
+Release_Build/
+__history/
+__recovery/
 
 # IDE
 .vscode/

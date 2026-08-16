@@ -832,6 +832,63 @@ void __fastcall TMainForm::FormShow(TObject *Sender)
         };
 
 #endif //__SHOW_SPLASHSCREEN
+
+
+
+        // =====================================================
+
+        // TEST5: надпись "ТЕСТОВАЯ ВЕРСИЯ" + кнопка "Выход"
+
+        // (над надписью "Ручное управление" / ProgramModeLabel)
+
+        // =====================================================
+
+        try {
+
+                TLabel *TestVersionLabel = new TLabel(this);
+
+                TestVersionLabel->Parent = ProgramModeLabel->Parent;
+
+                TestVersionLabel->Caption = L"ТЕСТОВАЯ ВЕРСИЯ";
+
+                TestVersionLabel->Font->Color = clBlack;
+
+                TestVersionLabel->Font->Style = TestVersionLabel->Font->Style << fsBold;
+
+                TestVersionLabel->Font->Height = ProgramModeLabel->Font->Height;
+
+                TestVersionLabel->AutoSize = true;
+
+                TestVersionLabel->Left = ProgramModeLabel->Left;
+
+                TestVersionLabel->Top = ProgramModeLabel->Top - TestVersionLabel->Height - 2;
+
+                if (TestVersionLabel->Top < 0) TestVersionLabel->Top = 0;
+
+                TestVersionLabel->Visible = true;
+
+
+
+                TButton *TestExitButton = new TButton(this);
+
+                TestExitButton->Parent = ProgramModeLabel->Parent;
+
+                TestExitButton->Caption = L"Выход";
+
+                TestExitButton->Font->Height = ProgramModeLabel->Font->Height;
+
+                TestExitButton->Left = TestVersionLabel->Left + TestVersionLabel->Width + 8;
+
+                TestExitButton->Top = TestVersionLabel->Top;
+
+                TestExitButton->Height = TestVersionLabel->Height + 6;
+
+                TestExitButton->OnClick = ExitButtonClick;
+
+                TestExitButton->Visible = true;
+
+        } catch(...) { /* TEST5: не критично, если не создалось */ };
+
 }
 
 //---------------------------------------------------------------------------

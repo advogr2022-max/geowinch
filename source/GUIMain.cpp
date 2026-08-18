@@ -3377,7 +3377,7 @@ void __fastcall TMainForm::SetLabelling()
 		DepthCalcTabSheet->Caption              = LABEL_DEPTHCALC[GenOrgan.Lng];
 //        DepthCalcTabSheetExitButton->Caption  	= LABEL_DISCARD[GenOrgan.Lng];
 		DepthCalcTabSheetExitButton->Caption  	= ExitSymbol;
-		DepthVisualisation->Unit                = (AnsiString)(__SEPARATOR01[GenOrgan.Lng]) + UNIT_METER[GenOrgan.Lng];
+		DepthVisualisation->Unit                = (UnicodeString)(__SEPARATOR01[GenOrgan.Lng]) + UNIT_METER[GenOrgan.Lng];
 		ResetButton->Caption      				= LABEL_CLEARING[GenOrgan.Lng];
 		UnloadCableButton->Caption           	= LABEL_UNLOADCABLE[GenOrgan.Lng];
 //		UnloadCableChancelButton->Caption    	= LABEL_DISCARD[GenOrgan.Lng];
@@ -4691,7 +4691,7 @@ void __fastcall TMainForm::ShowCalValTractionInfo()
 		try	{
 			HVfloatx = StrToFloat(PCalibTensionXEdit->Text);
 			HVfloaty = StrToFloat(PCalibTensionYEdit->Text);
-			if (HVfloatx == 0) PCalibTensionCalibInfoLabel->Caption = (AnsiString)("---") + " " + UNIT_NEWTON_PER_MILLIVOLT[GenOrgan.Lng];
+			if (HVfloatx == 0) PCalibTensionCalibInfoLabel->Caption = (UnicodeString)("---") + " " + UNIT_NEWTON_PER_MILLIVOLT[GenOrgan.Lng];
 			else PCalibTensionCalibInfoLabel->Caption = FloatToStrF((HVfloaty / HVfloatx), ffFixed, 7, 3) + " " + UNIT_NEWTON_PER_MILLIVOLT[GenOrgan.Lng];
 		}catch (...) {
 			PCalibTensionCalibInfoLabel->Caption = (UnicodeString)(L"---") + " " + UNIT_NEWTON_PER_MILLIVOLT[GenOrgan.Lng];
@@ -4815,19 +4815,19 @@ void __fastcall TMainForm::ShowCurrTractionViewUnit()
         switch (VarControl.GetParam_TractionViewDimensionUnit())
         {
                 case 1:         // Kilonewton
-                                HString = LABEL_TENSION[GenOrgan.Lng] + (AnsiString)__SEPARATOR01[GenOrgan.Lng] + CONST__BRACKET01LEFT + UNIT_KILONEWTON[GenOrgan.Lng] + CONST__BRACKET01RIGHT;
+                                HString = LABEL_TENSION[GenOrgan.Lng] + (UnicodeString)__SEPARATOR01[GenOrgan.Lng] + CONST__BRACKET01LEFT + UNIT_KILONEWTON[GenOrgan.Lng] + CONST__BRACKET01RIGHT;
                                 CurrTractionView->UnitLabel = HString;
                                 CurrTractionView->Unit = UNIT_KILONEWTON[GenOrgan.Lng];
                                 break;
 
                 case 2:         // Kilopond
-                                HString = LABEL_TENSION[GenOrgan.Lng] + (AnsiString)__SEPARATOR01[GenOrgan.Lng] + CONST__BRACKET01LEFT + UNIT_KILOPOND[GenOrgan.Lng] + CONST__BRACKET01RIGHT;
+                                HString = LABEL_TENSION[GenOrgan.Lng] + (UnicodeString)__SEPARATOR01[GenOrgan.Lng] + CONST__BRACKET01LEFT + UNIT_KILOPOND[GenOrgan.Lng] + CONST__BRACKET01RIGHT;
                                 CurrTractionView->UnitLabel = HString;
                                 CurrTractionView->Unit = UNIT_KILOPOND[GenOrgan.Lng];
                                 break;
 
                 default:        // Newton
-                                HString = LABEL_TENSION[GenOrgan.Lng] + (AnsiString)__SEPARATOR01[GenOrgan.Lng] + CONST__BRACKET01LEFT + UNIT_NEWTON[GenOrgan.Lng] + CONST__BRACKET01RIGHT;
+                                HString = LABEL_TENSION[GenOrgan.Lng] + (UnicodeString)__SEPARATOR01[GenOrgan.Lng] + CONST__BRACKET01LEFT + UNIT_NEWTON[GenOrgan.Lng] + CONST__BRACKET01RIGHT;
                                 CurrTractionView->UnitLabel = HString;
                                 CurrTractionView->Unit = UNIT_NEWTON[GenOrgan.Lng];
                                 break;

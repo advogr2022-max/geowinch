@@ -667,18 +667,18 @@ bool WCLog::WriteHeaderGEOSYS()
         HString2[8]  = 0;
 
         // Ermitteln des Breitesten Wortes für eine saubere Darstellung
-        HV = strlen(LABEL_LOCATION[LANGUAGE]);
-        if (HV < strlen(LABEL_WELL[LANGUAGE])) HV = strlen(LABEL_WELL[LANGUAGE]);
-        if (HV < strlen(LABEL_DATE[LANGUAGE])) HV = strlen(LABEL_DATE[LANGUAGE]);
-        if (HV < strlen(LABEL_TIMEOFDAY[LANGUAGE])) HV = strlen(LABEL_TIMEOFDAY[LANGUAGE]);
-		if (HV < strlen(LABEL_NAME[LANGUAGE])) HV = strlen(LABEL_NAME[LANGUAGE]);
-		if (HV < strlen(LABEL_TEAM[LANGUAGE])) HV = strlen(LABEL_TEAM[LANGUAGE]);
-		if (HV < strlen(LABEL_WINCHMACHINERY[LANGUAGE])) HV = strlen(LABEL_WINCHMACHINERY[LANGUAGE]);
-		if (HV < strlen(LABEL_COMMENT[LANGUAGE])) HV = strlen(LABEL_COMMENT[LANGUAGE]);
-        if (HV < strlen(LABEL_WINCH[LANGUAGE])) HV = strlen(LABEL_WINCH[LANGUAGE]);
-        if (HV < strlen(LABEL_DEPTH[LANGUAGE])) HV = strlen(LABEL_DEPTH[LANGUAGE]);
-        if (HV < strlen(LABEL_VELOCITY[LANGUAGE])) HV = strlen(LABEL_VELOCITY[LANGUAGE]);
-		if (HV < strlen(LABEL_TENSION[LANGUAGE])) HV = strlen(LABEL_TENSION[LANGUAGE]);
+        HV = wcslen(LABEL_LOCATION[LANGUAGE]);
+        if (HV < wcslen(LABEL_WELL[LANGUAGE])) HV = wcslen(LABEL_WELL[LANGUAGE]);
+        if (HV < wcslen(LABEL_DATE[LANGUAGE])) HV = wcslen(LABEL_DATE[LANGUAGE]);
+        if (HV < wcslen(LABEL_TIMEOFDAY[LANGUAGE])) HV = wcslen(LABEL_TIMEOFDAY[LANGUAGE]);
+		if (HV < wcslen(LABEL_NAME[LANGUAGE])) HV = wcslen(LABEL_NAME[LANGUAGE]);
+		if (HV < wcslen(LABEL_TEAM[LANGUAGE])) HV = wcslen(LABEL_TEAM[LANGUAGE]);
+		if (HV < wcslen(LABEL_WINCHMACHINERY[LANGUAGE])) HV = wcslen(LABEL_WINCHMACHINERY[LANGUAGE]);
+		if (HV < wcslen(LABEL_COMMENT[LANGUAGE])) HV = wcslen(LABEL_COMMENT[LANGUAGE]);
+        if (HV < wcslen(LABEL_WINCH[LANGUAGE])) HV = wcslen(LABEL_WINCH[LANGUAGE]);
+        if (HV < wcslen(LABEL_DEPTH[LANGUAGE])) HV = wcslen(LABEL_DEPTH[LANGUAGE]);
+        if (HV < wcslen(LABEL_VELOCITY[LANGUAGE])) HV = wcslen(LABEL_VELOCITY[LANGUAGE]);
+		if (HV < wcslen(LABEL_TENSION[LANGUAGE])) HV = wcslen(LABEL_TENSION[LANGUAGE]);
 
         StringBuffer.setf(ios_base::left);
 
@@ -797,15 +797,15 @@ bool WCLog::WriteHeaderGEOSYS()
         // Tabellenkopf
 
         // Spaltenbreiten festlegen
-        HV = strlen(LABEL_DATE[LANGUAGE]);
+        HV = wcslen(LABEL_DATE[LANGUAGE]);
         if (HV >= LOG_Col_Width_General) Col1Size = HV + 1;
-        HV = strlen(LABEL_TIMEOFDAY[LANGUAGE]);
+        HV = wcslen(LABEL_TIMEOFDAY[LANGUAGE]);
         if (HV >= LOG_Col_Width_General) Col2Size = HV + 1;
-        HV = strlen(LABEL_DEPTH[LANGUAGE]);
+        HV = wcslen(LABEL_DEPTH[LANGUAGE]);
         if (HV >= LOG_Col_Width_General) Col3Size = HV + 1;
-        HV = strlen(LABEL_MAGNETICMARK[LANGUAGE]);
+        HV = wcslen(LABEL_MAGNETICMARK[LANGUAGE]);
         if (HV >= LOG_Col_Width_General) Col4Size = HV + 1;
-        HV = strlen(LABEL_VELOCITY[LANGUAGE]);
+        HV = wcslen(LABEL_VELOCITY[LANGUAGE]);
         if (HV >= LOG_Col_Width_General) Col5Size = HV + 1;
 
         StringBuffer << setw(Col1Size) << LABEL_DATE[LANGUAGE];

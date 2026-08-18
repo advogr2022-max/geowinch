@@ -849,7 +849,7 @@ void __fastcall TMainForm::FormShow(TObject *Sender)
 
                 TestVersionLabel->Parent = ProgramModeLabel->Parent;
 
-                TestVersionLabel->Caption = L"ÒÅÑÒÎÂÀß ÂÅÐÑÈß";
+                TestVersionLabel->Caption = L"ÒÅÑÒÎÂÀß ÂÅÐÑÈß v0.0.3";
 
                 TestVersionLabel->Font->Color = clBlack;
 
